@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://me:me@logcenter.numidiasoft.io/es/sleek_formatter-2015.02.24/_search
+    body:
+      encoding: UTF-8
+      string: "         {\n           \"query\":{\n             \"filtered\":{\n               \"query\":{\n
+        \                \"bool\":{}},\n                 \"filter\":{\n                   \"bool\":{\n
+        \                    \"must\":[ \n                       {\"range\":\n                         {\n
+        \                          \"@timestamp\":{\n                              \"lte\":
+        \"2015-02-24\",\n                              \"gt\":  \"2015-02-24||-24h\"\n
+        \                           }\n                         }\n                       }\n
+        \                    ]\n                   }\n                   }\n                 }\n
+        \              },\n              \"size\": 2\n           }\n"
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.5.12
+      Date:
+      - Wed, 25 Feb 2015 11:02:31 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"took":1234567890888888,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":19,"max_score":1.0,"hits":[{"_index":"sleek_formatter-2015.02.24","_type":"realtime_errors","_id":"y98uEH3YRlOXgV21dBiBJg","_score":1.0,"_source":{"error":"reject","num_attempts":6,"failed_at":"2015-02-24T11:45:50
+        12345678908888881:00","payload":{"object":"page","entry":[{"id":"203621737645","time":1424774698,"changes":[{"field":"feed","value":{"item":"comment","verb":"remove","comment_id":"101535335309126412345678908888880153591128992646","parent_id":"2036217376412345678908888880153556734197646","sender_id":203621737645,"created_time":1424774698}}]}]},"source":"Facebook","@timestamp":"2015-02-24T11:45:50+01:00"}},{"_index":"sleek_formatter-2015.02.24","_type":"realtime_errors","_id":"EyFUTtMYQHuntRbvREzUiQ","_score":1.0,"_source":{"error":"reject","num_attempts":6,"failed_at":"2015-02-24T12:40:38
+        12345678908888881:00","payload":{"object":"page","entry":[{"id":"462403637209622","time":1424777979,"changes":[{"field":"feed","value":{"item":"like","verb":"add","parent_id":"46240363720962123456789088888828337743949542","sender_id":1623214198,"created_time":1424777979}}]},{"id":"121659634551741","time":1424777979,"changes":[{"field":"feed","value":{"recipient_id":121659634551741,"item":"post","verb":"remove","post_id":"12165963455174123456789088888891307554253608","sender_id":1621580067,"created_time":1424711624}}]}]},"source":"Facebook","@timestamp":"2015-02-24T12:40:38+01:00"}}]}}'
+    http_version: 
+  recorded_at: Wed, 25 Feb 2015 11:07:25 GMT
+recorded_with: VCR 2.9.3

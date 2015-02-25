@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://me:me@logcenter.numidiasoft.io/es/_nodes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.5.12
+      Date:
+      - Tue, 24 Feb 2015 13:31:00 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"cluster_name":"logcenter","nodes":{"UoNrg-3qQnyGFZZIui4PJw":{"name":"logcenter.numidiasoft.io","transport_address":"inet[/10.0.1.203:9300]","host":"logcenter.numidiasoft.io","ip":"127.0.0.1","version":"1.3.4","build":"a70f3cc","http_address":"inet[/10.0.1.203:9200]","attributes":{"max_local_storage_nodes":"1"},"settings":{"index":{"mapper":{"dynamic":"true"}},"node":{"max_local_storage_nodes":"1","name":"logcenter.numidiasoft.io"},"bootstrap":{"mlockall":"true"},"gateway":{"type":"local","expected_nodes":"1"},"http":{"port":"9200"},"name":"logcenter.numidiasoft.io","pidfile":"/usr/local/var/run/elasticsearch/logcenter_numidiasoft_io.pid","path":{"data":"/usr/local/var/data/elasticsearch","home":"/usr/local/elasticsearch","conf":"/usr/local/etc/elasticsearch","logs":"/usr/local/var/log/elasticsearch"},"action":{"auto_create_index":"true","disable_delete_all_indices":"true"},"cluster":{"name":"logcenter"},"config":"/usr/local/etc/elasticsearch/elasticsearch.yml","cloud":{"node":{"auto_attributes":"true"}},"script":{"disable_dynamic":"true"},"discovery":{"zen":{"minimum_master_nodes":"1","ping":{"multicast":{"enabled":"true"}}}},"foreground":"yes"},"os":{"refresh_interval_in_millis":1000,"available_processors":2,"cpu":{"vendor":"Intel","model":"Xeon","mhz":2500,"total_cores":2,"total_sockets":1,"cores_per_socket":2,"cache_size_in_bytes":25600},"mem":{"total_in_bytes":4143927296},"swap":{"total_in_bytes":0}},"process":{"refresh_interval_in_millis":1000,"id":23226,"max_file_descriptors":64000,"mlockall":true},"jvm":{"pid":23226,"version":"1.7.0_65","vm_name":"OpenJDK
+        64-Bit Server VM","vm_version":"24.65-b04","vm_vendor":"Oracle Corporation","start_time_in_millis":1415100054517,"mem":{"heap_init_in_bytes":2486173696,"heap_max_in_bytes":2469789696,"non_heap_init_in_bytes":24313856,"non_heap_max_in_bytes":224395264,"direct_max_in_bytes":2469789696},"gc_collectors":["ParNew","ConcurrentMarkSweep"],"memory_pools":["Code
+        Cache","Par Eden Space","Par Survivor Space","CMS Old Gen","CMS Perm Gen"]},"thread_pool":{"generic":{"type":"cached","keep_alive":"30s","queue_size":-1},"index":{"type":"fixed","min":2,"max":2,"queue_size":"200"},"snapshot_data":{"type":"scaling","min":1,"max":5,"keep_alive":"5m","queue_size":-1},"bench":{"type":"scaling","min":1,"max":1,"keep_alive":"5m","queue_size":-1},"get":{"type":"fixed","min":2,"max":2,"queue_size":"1k"},"snapshot":{"type":"scaling","min":1,"max":1,"keep_alive":"5m","queue_size":-1},"merge":{"type":"scaling","min":1,"max":1,"keep_alive":"5m","queue_size":-1},"suggest":{"type":"fixed","min":2,"max":2,"queue_size":"1k"},"bulk":{"type":"fixed","min":2,"max":2,"queue_size":"50"},"optimize":{"type":"fixed","min":1,"max":1,"queue_size":-1},"warmer":{"type":"scaling","min":1,"max":1,"keep_alive":"5m","queue_size":-1},"flush":{"type":"scaling","min":1,"max":1,"keep_alive":"5m","queue_size":-1},"search":{"type":"fixed","min":6,"max":6,"queue_size":"1k"},"percolate":{"type":"fixed","min":2,"max":2,"queue_size":"1k"},"management":{"type":"scaling","min":1,"max":5,"keep_alive":"5m","queue_size":-1},"refresh":{"type":"scaling","min":1,"max":1,"keep_alive":"5m","queue_size":-1}},"network":{"refresh_interval_in_millis":5000,"primary_interface":{"address":"10.0.1.203","name":"eth0","mac_address":"10:19:0F:FE:D4:A0"}},"transport":{"bound_address":"inet[/0.0.0.0:9300]","publish_address":"inet[/10.0.1.203:9300]"},"http":{"bound_address":"inet[/0.0.0.0:9200]","publish_address":"inet[/10.0.1.203:9200]","max_content_length_in_bytes":104857600},"plugins":[{"name":"inquisitor","version":"NA","description":"No
+        description found.","url":"/_plugin/inquisitor/","jvm":false,"site":true}]}}}'
+    http_version: 
+  recorded_at: Tue, 24 Feb 2015 13:35:52 GMT
+recorded_with: VCR 2.9.3

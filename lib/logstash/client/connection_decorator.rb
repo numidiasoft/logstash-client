@@ -1,8 +1,9 @@
 require "json"
+require "delegate"
 
 module Logstash
   module Client
-    class ConnectionDecorator < SimpleDelegator
+    class ConnectionDecorator < ::SimpleDelegator
 
       def get path
         response = client.http.get(build_path(path))

@@ -1,7 +1,7 @@
-require "logstash/client/version"
-require "logstash/client/connection"
-require "logstash/client/connection_decorator"
-require "logstash/client/table_request_template"
+require_relative "client/version"
+require_relative "client/connection"
+require_relative "client/connection_decorator"
+require_relative "client/table_request_template"
 
 module Logstash
   module Client

@@ -34,7 +34,7 @@ Initialize the client :
    logcenter.logger = true # log requests to STDOUT
  end 
 ```
-Load the first page of the table : 
+Load the first page of the index : 
 
 ```ruby
   index = "index_name"

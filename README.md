@@ -45,7 +45,7 @@ Get next pages
 ```ruby
  while response.body.size > 0 do
    response = response.next_page
-   puts reponse.body
+   puts response.body
  end
 ```
 

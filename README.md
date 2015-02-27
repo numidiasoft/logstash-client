@@ -37,7 +37,7 @@ Load the first page of the table :
 ```ruby
   index = "index_name"
   date = "2015-02-24"        
-  ago = "24h # The units supported are y (year), M (month), w (week), d (day), h (hour), m (minute), and s (second).
+  ago = "24h" # The units supported are y (year), M (month), w (week), d (day), h (hour), m (minute), and s (second).
   response = client.index(index, date, ago)
 ```
 Get next pages

@@ -6,7 +6,8 @@ describe Logstash::Client::ConnectionDecorator do
     connection = Logstash::Client::Connection.new(url: "https://logcenter.numidiasoft.io") do |logcenter|
       logcenter.login = "me"
       logcenter.password = "me"
-      logcenter.result_size = 1
+      logcenter.result_size = 2
+      logcenter.from = 3
       logcenter.prefix_path = "es"
     end
     @decorated_connection = Logstash::Client::ConnectionDecorator.new(connection)
@@ -26,7 +27,8 @@ describe Logstash::Client::ConnectionDecorator do
       date = "2015-02-24"
       ago = "24h"
       response = @decorated_connection.table(table, date, ago)
-      expect(response["hits"].size).to be(2)
+      expect(response.class).to be(Logstash::Client::Response)
+      expect(response.body["hits"]["hits"].size).to be(2)
     end
   end
 

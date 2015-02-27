@@ -12,7 +12,7 @@ http_interactions:
         \"2015-02-24\",\n                              \"gt\":  \"2015-02-24||-24h\"\n
         \                           }\n                         }\n                       }\n
         \                    ]\n                   }\n                   }\n                 }\n
-        \              },\n              \"size\": 2\n           }\n"
+        \              },\n  \"from\": 0\n            \"size\": 2\n           }\n"
     headers:
       User-Agent:
       - Faraday v0.9.1

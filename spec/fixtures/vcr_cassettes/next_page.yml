@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://me:me@logcenter.numidiasoft.io/es/sleek_formatter-2015.02.24/_search
+    body:
+      encoding: UTF-8
+      string: "         {\n           \"query\":{\n             \"filtered\":{\n               \"query\":{\n
+        \                \"bool\":{}},\n                 \"filter\":{\n                   \"bool\":{\n
+        \                    \"must\":[ \n                       {\"range\":\n                         {\n
+        \                          \"@timestamp\":{\n                              \"lte\":
+        \"2015-02-24\",\n                              \"gt\":  \"2015-02-24||-24h\"\n
+        \                           }\n                         }\n                       }\n
+        \                    ]\n                   }\n                   }\n                 }\n
+        \              },\n              \"from\": 2,\n              \"size\": 2\n
+        \          }\n"
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.5.12
+      Date:
+      - Fri, 27 Feb 2015 09:52:30 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"took":56,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":56,"max_score":1.0,"hits":[{"_index":"sleek_formatter-5656.56.56","_type":"realtime_errors","_id":"Ltb3jDhUQV2e5VzDT-N2Yg","_score":1.0,"_source":{"error":"reject","num_attempts":6,"failed_at":"5656-56-56T56:56:56
+        56:56","payload":{"object":"page","entry":[{"id":"565656565656569","time":5656565656,"changes":[{"field":"feed","value":{"item":"comment","verb":"remove","comment_id":"56565656565656565656565656565656565656565656","parent_id":"56565656565656565656565656565656565656565656","sender_id":565656565656569,"created_time":5656565656}}]}]},"source":"Facebook","@timestamp":"5656-56-56T56:56:56+56:56"}},{"_index":"sleek_formatter-5656.56.56","_type":"realtime_errors","_id":"-dMm0hbwT_uM9YFssEQ1oQ","_score":1.0,"_source":{"error":"reject","num_attempts":6,"failed_at":"5656-56-56T56:56:56
+        56:56","payload":{"object":"page","entry":[{"id":"565656565656","time":5656565656,"changes":[{"field":"feed","value":{"item":"comment","verb":"remove","comment_id":"565656565656565656565656565656565656565656565656","parent_id":"5656565656565656565656565656565656565656568","sender_id":5656565656,"created_time":5656565656}}]},{"id":"565656565656568","time":5656565656,"changes":[{"field":"feed","value":{"item":"like","verb":"add","parent_id":"56565656565656565656565656565656565656565656","sender_id":565656565656566,"created_time":5656565656}}]},{"id":"565656565656568","time":5656565656,"changes":[{"field":"feed","value":{"item":"like","verb":"add","parent_id":"56565656565656565656565656565656565656565656","sender_id":565656565656569,"created_time":5656565656}}]}]},"source":"Facebook","@timestamp":"5656-56-56T56:56:56+56:56"}}]}}'
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 09:57:28 GMT
+recorded_with: VCR 2.9.3

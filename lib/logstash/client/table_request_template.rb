@@ -3,7 +3,7 @@ module Logstash
     module TableRequestTemplate
       extend self
 
-      def content(size: 500, date:, ago:)
+      def content(size: 500, from: 0, date:, ago:)
         request = <<-JSON
          {
            "query":{
@@ -26,6 +26,7 @@ module Logstash
                    }
                  }
                },
+              "from": #{from},
               "size": #{size}
            }
         JSON

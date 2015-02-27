@@ -13,7 +13,8 @@ describe Logstash::Client::TableRequestTemplate do
   end
 
   it "sets the right response size" do
-    request = JSON.parse(described_class.content(size: 2, date: date, ago: ago))
+    request = JSON.parse(described_class.content(size: 2, from: 3,  date: date, ago: ago))
     expect(request["size"]).to eql(2)
+    expect(request["from"]).to eql(3)
   end
 end

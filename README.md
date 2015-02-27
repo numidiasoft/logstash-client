@@ -25,12 +25,12 @@ Initialize the client :
 
 ```ruby
  client = Logstash::Client.new("https://logcenter.numidiasoft.io") do |logcenter|
-    logcenter.login = "me"   
-    logcenter.password = "me"
-    logcenter.result_size = 2 # size of the result data
-    logcenter.prefix_path = "es"  # prefix add to the path of http request
-    logcenter.logger = true # log requests to STDOUT
-  end 
+   logcenter.login = "me"   
+   logcenter.password = "me"
+   logcenter.result_size = 2 # size of the result data
+   logcenter.prefix_path = "es"  # prefix add to the path of http request
+   logcenter.logger = true # log requests to STDOUT
+ end 
 ```
 Load the first page of the table : 
 

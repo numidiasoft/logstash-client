@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/numidiasoft/logstash-client/badges/gpa.svg)](https://codeclimate.com/github/numidiasoft/logstash-client)
+
 # Logstash::Client
 
 Very Simple Gem to fetch data from a logstash index with pagination. It could be very helpful when you need to proccess data (nginx logs for example ).

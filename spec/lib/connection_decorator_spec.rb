@@ -21,12 +21,12 @@ describe Logstash::Client::ConnectionDecorator do
     end
   end
 
-  it "returns data for a table" do
-    VCR.use_cassette("table") do
-      table = "sleek_formatter-2015.02.24"
+  it "returns data for a an index" do
+    VCR.use_cassette("index") do
+      index = "sleek_formatter-2015.02.24"
       date = "2015-02-24"
       ago = "24h"
-      response = @decorated_connection.table(table, date, ago)
+      response = @decorated_connection.index(index, date, ago)
       expect(response.class).to be(Logstash::Client::Response)
       expect(response.body["hits"]["hits"].size).to be(2)
     end

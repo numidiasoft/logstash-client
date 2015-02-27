@@ -17,10 +17,10 @@ module Logstash
         JSON.parse(response.body)
       end
 
-      def table(table, date, ago)
-        url = '/'.concat(table).concat('/_search')
+      def index(index, date, ago)
+        url = '/'.concat(index).concat('/_search')
         table_request_template =  TableRequestTemplate.content(size: client.result_size, from: from,  date: date, ago: ago)
-        request ||= Request.new(method: self.method(:table), params: { table: table, date: date, ago: ago })
+        request ||= Request.new(method: self.method(:index), params: { index: index, date: date, ago: ago })
         payload = self.post(url, table_request_template)
         response = Response.new(request: request , payload: payload)
       end

@@ -13,14 +13,14 @@ describe Logstash::Client::Response do
 
   let(:options) do
     options = {
-      table: "sleek_formatter-2015.02.24",
+      index: "sleek_formatter-2015.02.24",
       date: "2015-02-24",
       ago: "24h"
     }
   end
 
   let(:request) do
-    Logstash::Client::Request.new(method: client.method(:table), params: options)
+    Logstash::Client::Request.new(method: client.method(:index), params: options)
   end
 
   let(:response) do

@@ -13,13 +13,13 @@ describe Logstash::Client do
  
   specify { expect(client.class).to be(Logstash::Client::ConnectionDecorator) }
 
-  it "returns the requested items for the table" do
-    table = "sleek_formatter-2015.02.24"
+  it "returns the requested items for the index" do
+    index = "sleek_formatter-2015.02.24"
     date = "2015-02-24"
     ago = "24h"
 
-    VCR.use_cassette("table") do
-      response = client.table(table, date, ago)
+    VCR.use_cassette("index") do
+      response = client.index(index, date, ago)
       expect(response.body["hits"]["hits"].size).to be(2)
       expect(described_class.current_connection.class).to be(Logstash::Client::ConnectionDecorator)
     end

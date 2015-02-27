@@ -13,14 +13,14 @@ describe Logstash::Client::Request do
 
   let(:options) do
     options = {
-      table: "sleek_formatter-2015.02.24",
+      index: "sleek_formatter-2015.02.24",
       date: "2015-02-24",
       ago: "24h"
     }
   end
 
   let(:request) do
-    Logstash::Client::Request.new(method: @client.method(:table), params: options)
+    Logstash::Client::Request.new(method: @client.method(:index), params: options)
   end
 
   it "returns a populated request" do
@@ -30,7 +30,7 @@ describe Logstash::Client::Request do
 
   it "returns the page 0 of results" do
     VCR.use_cassette("next_page") do
-     @client.table(options[:table], options[:date], options[:ago])
+     @client.index(options[:index], options[:date], options[:ago])
      expect(@client.from).to eql(0)
     end
   end

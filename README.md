@@ -43,9 +43,12 @@ Load the first page of the table :
 Get next pages
 
 ```ruby
- while response.body.size > 0 do
+ size = response.body["hits"]["hits"].size
+
+ while size > 0 do
    response = response.next_page
    puts response.body
+   size = response.body["hits"]["hits"].size
  end
 ```
 

@@ -1,5 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/numidiasoft/logstash-client/badges/gpa.svg)](https://codeclimate.com/github/numidiasoft/logstash-client)
-[![Code Climate](https://codeclimate.com/github/numidiasoft/logstash-client/badges/gpa.svg)](https://codeclimate.com/github/numidiasoft/logstash-client)
+[![Test Coverage](https://codeclimate.com/github/numidiasoft/logstash-client/badges/coverage.svg)](https://codeclimate.com/github/numidiasoft/logstash-client)
 
 # Logstash::Client
 
